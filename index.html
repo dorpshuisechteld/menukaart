@@ -331,6 +331,10 @@
           return volgordeA - volgordeB;
         }
 
+        if (a.type !== b.type) {
+          return a.type.localeCompare(b.type, "nl");
+        }
+
         return a.naam.localeCompare(b.naam, "nl");
       });
     }
